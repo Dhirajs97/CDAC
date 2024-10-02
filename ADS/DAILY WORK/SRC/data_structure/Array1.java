@@ -90,8 +90,7 @@ class Array1{
 				if(a1[i] == a1[j])
 					System.out.print(a1[j]+ "  ");
 				break;
-			}
-			
+			}	
 		}			
 	}
 }
