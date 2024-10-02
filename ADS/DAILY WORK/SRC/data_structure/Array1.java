@@ -1,4 +1,4 @@
-
+/* Array - Search, Insert, Delete, Repeated Elements*/
 class Array1{
 
 	// Search for an element -key
