@@ -1,10 +1,8 @@
-/* Singly Linked List*/
-
+/* Singly Linked List - Insertion | Deletion | Reverse | Middle Point*/
 
 class SinglyLinkedList{
 
 	Node head;	// reference to first node is declared	|| head is reference of Node class
-
 	// Nested class - to create a Node
 	static class Node{
 		int data;
@@ -21,8 +19,7 @@ class SinglyLinkedList{
 		while(n != null){	// check if head/ n points to the any node  | If there is no next node it will fail
 			System.out.print(n.data + " ----> " );	// n.data - to take the value of the node
 			n = n.next;		// to move to the next node
-		}
-		
+		}		
 	}
 	
 	// Insertion at the begining
@@ -55,8 +52,7 @@ class SinglyLinkedList{
 	}
 	
 	//-----------------------
-	// Deletion 
-	
+	// Deletion 	
 	void deleteNode(int key){	// key - which element to be deleted
 		Node temp = head;	// temp- current pointer to traverse and check if the 
 		Node prev = null;	//
@@ -67,8 +63,7 @@ class SinglyLinkedList{
 			return;
 		}
 		
-		// Deletion in between
-		
+		// Deletion in between		
 		while(temp != null && temp.data != key){	// check if the list is not empty and deletion element is not at the first node
 			prev = temp;		//move prev to temp
 			temp = temp.next;	// move temp to the next node and check if the data matches
@@ -81,7 +76,7 @@ class SinglyLinkedList{
 	}
 	
 	//---------------------
-	// Deletion at index 
+	// Deletion at specific index 
 	void deleteNodeAtIndex(int position){
 		if(head == null){		// check if the list is empty
 			return;
@@ -96,16 +91,14 @@ class SinglyLinkedList{
 		
 			//  i<position-1  =>suppose we have position =3 at index 3 we want to delete the node | so  i<position-1 loop will stop at 3-1 = 2  - at 2 index the loop will get exit 'temp=2'  | and we will next/link of this 2 temp node to the 'temp.next.next' node (next node of node of which we want to delete)  2-->4 2 will point to 4 and 3 will get deleted  */
 		for(int i=0; temp!=null && i<position-1; i++){  	
-			temp = temp.next;		// till we get the position move the temp pointer
-		
+			temp = temp.next;		// till we get the position move the temp pointer		
 		}
 		if(temp == null || temp.next == null){
 			return;
 		}
-
+		
 		Node next = temp.next.next;		// next/link of temp connext with next of next node  | as next node after node need to be deleted
 		temp.next = next;
-		
 	}
 	
 	
@@ -121,8 +114,7 @@ class SinglyLinkedList{
 		System.out.println("\nMiddle Element in the Linked List : "+ptr1.data);
 	}
 	
-	// Print the reversed linked list 
-	
+	// Reverse the linked list 
 	Node reverse(Node node){
 		Node prev = null;
 		Node current = node;	// Starting point of list	
@@ -135,6 +127,20 @@ class SinglyLinkedList{
 			current = next;			// move current pointer to next node
 		}	
 		return prev;
+	}
+	
+	// Reverse with recursion
+	public void printReverse() {
+		printReverse(head);
+		System.out.println("\n");
+	}
+	public void printReverse(Node temp) {
+		if (temp == null) {
+			return;
+		} else {
+			printReverse(temp.next);
+		}
+		System.out.print(temp.data+ " --> ");
 	}
 
 	public static void main(String args[]){
@@ -194,6 +200,11 @@ class SinglyLinkedList{
 		// reverse the linked list
 		l1.head = l1.reverse(l1.head);
 		l1.display();
+		
+		// reverse with recursive method
+		System.out.println("\n");
+		l1.printReverse();
+		
 		
 		
 	}
