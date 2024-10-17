@@ -1,0 +1,179 @@
+SQL Exercise 1
+
+
+1. Create the table SEMP with the following structure:-
+EMPNO CHAR(4) EMPNAME CHAR(20) BASIC FLOAT DEPTNO CHAR(2) DEPTHEAD CHAR(4)
+
+mysql> create table SEMP(EMPNO CHAR(4),
+    -> EMPNAME CHAR(20),
+    -> BASIC FLOAT,
+    -> DEPTNO CHAR(2),
+    -> DEPTHEAD CHAR(4));
+Query OK, 0 rows affected (0.04 sec)
+
+
+2. Create the table SDEPT with the following structure:-
+
+DEPTNO 	CHAR(2)
+DEPTNAME 	CHAR(15)
+
+
+mysql> create table SDEPT(DEPTNO CHAR(2), DEPTNAME CHAR(15));
+Query OK, 0 rows affected (0.04 sec)
+
+
+3. Insert into the SDEPT table the following values:-
+10, Development 
+20, Training
+
+mysql> insert into SDEPT values(10, 'Development'), (20, 'Training');
+Query OK, 2 rows affected (0.01 sec)
+Records: 2  Duplicates: 0  Warnings: 0
+
+
+
+4. Insert into the SEMP table the following values:-
+0001, SUNIL, 6000, 10 0002, HIREN, 8000, 20 0003, ALI, 4000, 10, 0001 0004, GEORGE, 6000, 0002
+
+mysql> insert into SEMP values('0001', 'SUNIL', 6000, '10', Null),
+    -> ('0002', 'HIREN', 8000, '20', NULL),
+    -> ('0003', 'ALI', 4000, '10', '0001'),
+    -> ('0004', 'GEORGE', 6000, Null, '0002');
+Query OK, 4 rows affected (0.01 sec)
+Records: 4  Duplicates: 0  Warnings: 0
+
+
+Create S, P, J, SPJ tables as specified below and insert a few rows in each table:-
+SUPPLIER(S#, Sname, Status, City)	- 	S
+PARTS(P#, Pname, Color, Weight, City)	- 	P
+PROJECTS (J#, Jname, City)	- 	J
+SUPPLIER-PARTS-PROJECT (S#, P#, J#, Qty)	- 	SPJ
+Sample data for S# column:- ‘S1’, ‘S2’, ‘S3’, etc. Sample data for P# column:- ‘P1’, ‘P2’, ‘P3’, etc. Sample data for J# column:- ‘J1’, ‘J2’, ‘J3’, etc. Sample data for Status column:- 10, 20, 30, etc.
+
+=>
+mysql> create table S (`S#` char(2), `Sname` varchar(20), `Status` Int, `City` Char(20));
+
+mysql> create table P (`P#` char(2), `Pname` varchar(20), `Color` varchar(10), `Weight` float, `City` varchar(20));
+
+mysql> create table J (`J#` char(2), `Jname` varchar(20), `City` Char(20));
+
+mysql> create table SPJ (`S#` char(2), `P#` char(2), `J#` char(2), `QTY` Int);
+
+
+
+Write the SELECT queries to do the following:-
+
+5. Display all the data from the S table.
+mysql> select * from S;
++------+--------+--------+--------+
+| S#   | Sname  | Status | City   |
++------+--------+--------+--------+
+| S1   | John   |     10 | London |
+| S2   | Jack   |     20 | Paris  |
+| S3   | Thomas |     30 | Athens |
++------+--------+--------+--------+
+3 rows in set (0.00 sec)
+
+6. Display only the S# and SNAME fields from the S table.
+mysql> select `S#`, Sname from S;
++------+--------+
+| S#   | Sname  |
++------+--------+
+| S1   | John   |
+| S2   | Jack   |
+| S3   | Thomas |
++------+--------+
+3 rows in set (0.01 sec)
+
+
+7. Display the PNAME and COLOR from the P table for the CITY=”London”.
+mysql> select Pname, Color from P where City = 'London';
++-------+-------+
+| Pname | Color |
++-------+-------+
+| Part1 | Red   |
++-------+-------+
+1 row in set (0.00 sec)
+
+8. Display all the Suppliers from London.
+mysql> select Sname from S where city='London';
++-------+
+| Sname |
++-------+
+| John  |
++-------+
+1 row in set (0.00 sec)
+
+9. Display all the Suppliers from Paris or Athens.
+mysql> select * from S where city='Paris' or city='Athens';
++------+--------+--------+--------+
+| S#   | Sname  | Status | City   |
++------+--------+--------+--------+
+| S2   | Jack   |     20 | Paris  |
+| S3   | Thomas |     30 | Athens |
++------+--------+--------+--------+
+2 rows in set (0.00 sec)
+
+10. Display all the Projects in Athens.
+mysql> select * from P where city='Athens';
++------+-------+-------+--------+--------+
+| P#   | Pname | Color | Weight | City   |
++------+-------+-------+--------+--------+
+| P3   | Part3 | Blue  |  14.25 | Athens |
++------+-------+-------+--------+--------+
+1 row in set (0.00 sec)
+
+11. Display all the Partnames with the weight between 12 and 14 (inclusive of both).
+mysql> select pname, weight from P where weight between 12 and 14;
++-------+--------+
+| pname | weight |
++-------+--------+
+| Part1 |     12 |
+| Part2 |   13.5 |
++-------+--------+
+2 rows in set (0.00 sec)
+
+12. Display all the Suppliers with a Status greater than or equal to 20.
+mysql> select * from S where status >= 20;
++------+--------+--------+--------+
+| S#   | Sname  | Status | City   |
++------+--------+--------+--------+
+| S2   | Jack   |     20 | Paris  |
+| S3   | Thomas |     30 | Athens |
++------+--------+--------+--------+
+2 rows in set (0.00 sec)
+
+13. Display all the Suppliers except the Suppliers from London.
+mysql> select * from S where city != 'London';
++------+--------+--------+--------+
+| S#   | Sname  | Status | City   |
++------+--------+--------+--------+
+| S2   | Jack   |     20 | Paris  |
+| S3   | Thomas |     30 | Athens |
++------+--------+--------+--------+
+2 rows in set (0.00 sec)
+
+14. Display only the Cities from where the Suppliers come from.
+mysql> select distinct city from S;
++--------+
+| city   |
++--------+
+| London |
+| Paris  |
+| Athens |
++--------+
+3 rows in set (0.00 sec)
+
+15. Assuming that the Part Weight is in GRAMS, display the same in
+MILLIGRAMS and KILOGRAMS.
+mysql> select Pname, Weight as Grams, (Weight * 1000) as Milligrams, (weight / 1000) as Kilograms from P;
++-------+-------+------------+-----------+
+| Pname | Grams | Milligrams | Kilograms |
++-------+-------+------------+-----------+
+| Part1 |    12 |      12000 |     0.012 |
+| Part2 |  13.5 |      13500 |    0.0135 |
+| Part3 | 14.25 |      14250 |   0.01425 |
++-------+-------+------------+-----------+
+3 rows in set (0.00 sec)
+
+

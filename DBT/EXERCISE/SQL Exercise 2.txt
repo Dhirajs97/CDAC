@@ -1,0 +1,52 @@
+SQL Exercise 2
+-------------------------------------------------------------------
+
+1.	Display the Supplier table in the descending order of CITY.
+
+mysql> select * from S order by City DESC;
++------+--------+--------+--------+
+| S#   | Sname  | Status | City   |
++------+--------+--------+--------+
+| S2   | Jack   |     20 | Paris  |
+| S1   | John   |     10 | London |
+| S3   | Thomas |     30 | Athens |
++------+--------+--------+--------+
+3 rows in set (0.00 sec)
+
+
+2.	Display the Part Table in the ascending order of CITY and within the city in
+the ascending order of Part names.
+
+mysql> select * from P order by City, Pname;
++------+-------+-------+--------+--------+
+| P#   | Pname | Color | Weight | City   |
++------+-------+-------+--------+--------+
+| P3   | Part3 | Blue  |  14.25 | Athens |
+| P1   | Part1 | Red   |     12 | London |
+| P2   | Part2 | Green |   13.5 | Paris  |
++------+-------+-------+--------+--------+
+3 rows in set (0.00 sec)
+
+3.	Display all the Suppliers with a status between 10 and 20.
+mysql> select * from S where status between 10 and 20;
++------+-------+--------+--------+
+| S#   | Sname | Status | City   |
++------+-------+--------+--------+
+| S1   | John  |     10 | London |
+| S2   | Jack  |     20 | Paris  |
++------+-------+--------+--------+
+2 rows in set (0.00 sec)
+
+4.	Display all the Parts and their Weight, which are not in the range of 10 and 15.
+mysql> select Pname, weight from P where weight not between 10 and 15;
+
+5.	Display all the Part names starting with the letter ‘S’.
+mysql> select Pname from P where Pname like 'S%';
+Empty set (0.01 sec)
+
+6.	Display all the Suppliers, belonging to cities starting with the letter ‘L’.
+mysql> select Sname from S where Sname like 'S%';
+
+
+7.	Display all the Projects, with the third letter in JNAME as ‘n’.
+mysql> select * from J where jname like '__n%';
