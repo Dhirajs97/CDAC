@@ -1,0 +1,19 @@
+
+Assignment –2
+Introducing Relational Databases.
+--------------------------------------
+
+
+1) Which field of the Customers table is the primary key?
+=> CNUM	
+
+2) What is the 4th column of the Customers table?
+=> RATING
+
+3) What is another word for row? For column?
+=> Row can be called as Tuple or Entity.
+Column can be called as Attribute or Key.
+
+4) Why isn’t it possible to see the first five rows of a table?
+=> When we insert a large number of rows, the rows get inserted where they get the space, so the insertion order is not maintained.
+Rows of the table are scattered all over the database Server HD.

@@ -1,0 +1,102 @@
+Assignment –5 Relational and Logical
+Operators.
+1) Write a query that will give you all orders for more than Rs. 1,000.
+=>
+mysql> select * from orders where AMT > 1000;
++------+---------+------------+------+------+
+| Onum | Amt     | Odate      | Cnum | Snum |
++------+---------+------------+------+------+
+| 3002 | 1900.10 | 1990-10-03 | 2007 | 1004 |
+| 3005 | 5160.45 | 1990-10-03 | 2003 | 1002 |
+| 3006 | 1098.16 | 1990-10-03 | 2008 | 1007 |
+| 3009 | 1713.23 | 1990-10-04 | 2002 | 1003 |
+| 3008 | 4723.00 | 1990-10-05 | 2006 | 1001 |
+| 3010 | 1309.95 | 1990-10-06 | 2004 | 1002 |
+| 3011 | 9891.88 | 1990-10-06 | 2006 | 1001 |
++------+---------+------------+------+------+
+7 rows in set (0.00 sec)
+
+
+2) Write a query that will give you the names and cities of all salespeople in
+London with a commission above .10.
+=>
+mysql> select Sname, City from salespeople where city='London' and comm > 0.10;
++--------+--------+
+| Sname  | City   |
++--------+--------+
+| Peel   | London |
+| Motika | London |
++--------+--------+
+2 rows in set (0.00 sec)
+
+
+3) Write a query on the Customers table whose output will exclude all customers
+with a rating <= 100, unless they are located in Rome.
+=>
+mysql> select * from Customers where rating > 100 or city = 'Rome';
++------+----------+----------+--------+------+
+| Cnum | Cname    | City     | Rating | Snum |
++------+----------+----------+--------+------+
+| 2002 | Giovanni | Rome     |    200 | 1003 |
+| 2003 | Liu      | San Jose |    200 | 1002 |
+| 2004 | Grass    | Berlin   |    300 | 1002 |
+| 2008 | Cisneros | San Jose |    300 | 1007 |
+| 2007 | Pereira  | Rome     |    100 | 1004 |
++------+----------+----------+--------+------+
+5 rows in set (0.00 sec)
+
+
+4) What will be the output from the following query?
+Select * from Orders
+where (amt < 1000 OR
+NOT (odate = ‘1990-10-03’
+AND cnum > 2003));
+=>
+The above query will select all the rows from Orders table whose AMT is less than 1000 or 
+the order was not placed on '1990-10-03' or the cnum is less than or equal to 2003.
+
+mysql> Select * from Orders where (amt < 1000 OR NOT(odate = '1990-10-03' AND cnum > 2003));
++------+---------+------------+------+------+
+| Onum | Amt     | Odate      | Cnum | Snum |
++------+---------+------------+------+------+
+| 3001 |   18.69 | 1990-10-03 | 2008 | 1007 |
+| 3003 |  767.19 | 1990-10-03 | 2001 | 1001 |
+| 3005 | 5160.45 | 1990-10-03 | 2003 | 1002 |
+| 3009 | 1713.23 | 1990-10-04 | 2002 | 1003 |
+| 3007 |   75.75 | 1990-10-04 | 2004 | 1002 |
+| 3008 | 4723.00 | 1990-10-05 | 2006 | 1001 |
+| 3010 | 1309.95 | 1990-10-06 | 2004 | 1002 |
+| 3011 | 9891.88 | 1990-10-06 | 2006 | 1001 |
++------+---------+------------+------+------+
+
+5) What will be the output of the following query?
+Select * from Orders
+where NOT ((odate = ‘1990-10-03’ OR snum
+>1006) AND amt >= 1500);
+
+
+mysql> Select * from Orders where NOT ((odate = '1990-10-03' OR snum >1006) AND amt >= 1500);
++------+---------+------------+------+------+
+| Onum | Amt     | Odate      | Cnum | Snum |
++------+---------+------------+------+------+
+| 3001 |   18.69 | 1990-10-03 | 2008 | 1007 |
+| 3003 |  767.19 | 1990-10-03 | 2001 | 1001 |
+| 3006 | 1098.16 | 1990-10-03 | 2008 | 1007 |
+| 3009 | 1713.23 | 1990-10-04 | 2002 | 1003 |
+| 3007 |   75.75 | 1990-10-04 | 2004 | 1002 |
+| 3008 | 4723.00 | 1990-10-05 | 2006 | 1001 |
+| 3010 | 1309.95 | 1990-10-06 | 2004 | 1002 |
+| 3011 | 9891.88 | 1990-10-06 | 2006 | 1001 |
++------+---------+------------+------+------+
+
+
+6) What is a simpler way to write this query?
+Select snum, sname, city, comm From Salespeople where (comm > .12 OR comm <.14);
+=> 
+mysql> Select * From Salespeople where comm between 0.12 and 0.14;
++------+--------+----------+------+
+| Snum | Sname  | City     | Comm |
++------+--------+----------+------+
+| 1002 | Serres | San Jose | 0.13 |
++------+--------+----------+------+
+
