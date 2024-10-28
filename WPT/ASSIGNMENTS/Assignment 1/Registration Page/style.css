@@ -1,0 +1,31 @@
+html{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    width:auto; 
+
+}
+
+body{
+    width: 100%;
+
+}
+
+.container{
+    width: 100%;
+    
+}
+table{
+    width: 100%;
+    font-size: 14px;
+
+    
+}
+td{
+    padding: 7px;
+}
+.row1{
+    background-color: rgba(175, 212, 236, 0.651);
+    
+}
+.row2{
+    background-color: rgba(211, 217, 223, 0.226);
+}
