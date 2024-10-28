@@ -1,0 +1,76 @@
+html{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+    padding-left: 20%;
+    padding-right: 20%;
+
+}
+
+.container{
+        
+    display: flex;
+    box-shadow: 10px 15px 15px 5px #92c7eb;
+    
+   
+}
+
+.c1{
+    width: 35%;
+    background-color: #006eff;
+    color: white;
+    padding: 15px 15px;
+    position: relative;
+}
+.c1 h3{
+    font-size: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+.c1 p{
+    margin-top: 0;
+}
+.c1 a{
+    text-decoration: none;
+    color: white;
+}
+.c1 .connect{
+    text-align: center;
+    
+    font-size: 24px;
+    margin-top: 200px;
+}
+
+.c1 .connect i{
+    padding-right: 10px;
+}
+.c2{
+    width: 65%;
+    background-color: aliceblue;
+    padding: 40px 40px;
+}
+.c2 h3{
+    font-size: 35px;
+}
+input{
+    background-color: aliceblue;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    width: 90%;
+    font-size: 18px;
+    margin: 20px;
+    border-color: rgb(233, 180, 5);
+}
+
+button{
+    width: 90%;
+    background-color: #006eff;
+    padding: 15px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    color: white;
+    margin: 20px;
+    
+}
