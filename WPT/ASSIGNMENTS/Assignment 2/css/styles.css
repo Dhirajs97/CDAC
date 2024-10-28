@@ -1,0 +1,532 @@
+
+/*--------- HTML PAGE --------------*/
+
+html {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    width:auto;            
+    
+}
+body {
+   
+    margin: 0;
+    
+}
+
+
+/*---------- NAV -----------*/
+
+nav {
+    width: 100%;
+    height: 80px;
+    box-shadow: 0px 10px 20px #eeeeee;
+    position: fixed;
+    background-color: black;
+}
+
+#logo {
+    width: 70px;
+    height: 50px;
+    
+    
+}
+
+#nav-links {
+    position: absolute;
+    right: 40px;
+    top: 50px;
+}
+
+#brand-name {
+    padding-left: 10px;
+    position: absolute;
+    top: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+ }
+
+ #nav-links a {
+    margin-right: 10px;
+    text-decoration: none;
+    font-size: 15px;
+    color: #f0831d;    
+    padding: 10px 10px;
+    
+    transition: background 0.4s;
+}
+
+ #nav-links a:hover {
+    
+    color: wheat;
+    text-decoration: underline;
+}
+
+ .menu-icon {
+    display: none;
+  }
+
+  /* Dropdown Menu Styling */
+.dropdown{
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: #555;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 5px;
+}
+
+.dropdown-content a{
+    color: white;
+    padding: 10px 15px;
+    display: block;
+    text-decoration: none;
+}
+
+.dropdown-content a:hover{
+    background-color: #666;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+
+
+
+/*=====  INDEX ========*/
+
+
+/* Carosol section*/
+.carosoul-section{
+    background-image: url('../images/bg3.jpg');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      height: 600px;
+      display: flex;
+      align-items: center;
+}
+.carosoul-section .container-carosoul{
+    padding-left: 10%;
+}
+
+.carosoul-content h3{
+    font-size: 50px;
+    margin-bottom: 1rem;
+}
+.carosoul-content button {
+    background-color: #ff9900;
+    border: none;
+    color: white;
+    padding: 10px 30px;
+    font-size: 1rem;
+    
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+    margin-top: 1rem;
+    
+  }
+  .carosoul-content button:hover{   
+    color: white;
+    background-color: #643f02;
+  }
+
+/*  Services  */
+.container-services{
+    margin-left: 10%;
+    margin-right: 10%;
+    box-shadow: 5px 10px 10px 5px;
+    text-align: center;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    margin-bottom: 50px;
+    margin-top: -100px;
+}
+.container-services p{
+    color: #ff9900;
+    padding-top: 50px;
+}
+.container-services h2{
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.services-content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+.service-item {
+    background-color: #fff;
+    border-radius: 10px;
+    width: 25%;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.service-item:hover {
+    transform: translateY(-10px);
+}
+
+.service-item i {
+    font-size: 2.5em;
+    color: #ff9900;
+    margin-bottom: 10px;
+}
+
+.service-item h3 {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.service-item p {
+    color: #777;
+    font-size: 0.9em;
+}
+
+.all-services-btn {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 10px 30px;
+    background-color: #ff9900;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.all-services-btn:hover {
+    background-color: #643f02;
+}
+
+/* About Us */
+.container-about{
+    width: 100%;
+    display: flex;
+    margin: 10px 30px;
+}
+.about-content{
+
+    width: 50%;
+    align-content: center;
+}
+.about-content .about-head{
+    color: #ff9900;
+}
+.about-img{
+    width: 50%;
+    align-content: center;
+    padding-left: 10%;
+}
+.about-img img{
+    width: 400px;
+    height: 400px;
+    border-radius: 50px 10px 50px 10px;
+}
+
+/* Contact Us*/
+.container-contact{
+    background-image: url('../images/bg4.jpg');
+    
+    margin: 30px 50px;
+    border-radius: 20px;
+    opacity: 1;
+    align-items: center;
+    display: flex;
+    height: 245px;
+    box-shadow: 10px 20px 20px 10px #bfd1f52d;
+}
+.about-content{
+    width: 80%;
+    padding-left: 20px;
+}
+.div-btn{
+    width: 20%;
+}
+.container-contact h2{
+    color: white;
+}
+
+
+
+/*=======  Sign Up page  ==========*/
+
+.container{
+    position: absolute;
+    margin-top: 100px;
+    margin-left: 30%;
+    margin-right: 30%;
+    justify-content: center;
+}
+
+.container .form{
+    margin-top: 80px;
+    border-radius: 2%;
+    border-color: aqua;
+    border-style: solid;
+    box-shadow: 10px 5px 10px 5px darkblue;
+    text-align: center;
+    
+    
+}
+
+.container input{
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    width: 70%;
+    padding: 20px;
+    font-size: 20px;
+    margin-bottom: 0;
+    background: none;
+    
+}
+
+.container .btn {
+    
+    background-color: black;
+    border-radius: 2%;
+    padding: 10px 30px 10px 30px;
+    color: white;
+    width: 200px;
+    margin-top: 10px;
+    font-size: 20px;
+
+}
+
+/*=========  Sign IN page ==========*/
+
+.signin-bg{
+    background-image: url(../images/bg5.png);    
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.signup-bg{
+    background-image: url(../images/bg5.png);    
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.signin-container{
+    width: 600px;
+    height: auto;
+    text-align: center;
+    margin: 50px, auto;
+    display: flex;
+
+    margin-top: 100px;
+    position: absolute;
+    padding-top: 100px;
+    margin-left: 30%;
+    margin-right: 30%;
+    justify-content: center;
+}
+
+.signin-container .form{
+    width: 50%;
+    background-color: white;
+    opacity: 0.9;
+    text-align: center;
+    border-radius: 20px 0px 0px 20px;
+    border-style: none;
+    box-shadow: 10px 0px 10px 5px #4e07481e;
+    padding-bottom: 20px;
+}
+.signin-container .icons i{
+    padding-right: 10px;     
+    text-align: center;
+    color: rgb(37, 219, 243);
+}
+
+
+.signin-container .form input{
+    width: 50%;
+    border-radius: 20px 20px;
+    margin-bottom: 10px;
+    padding: 10px 10px;
+    border-style: none;
+    background-color: rgba(128, 128, 128, 0.158);
+    
+}
+.signin-container .form .sign{
+    font-size: 10px;
+    color: black;
+}
+
+.signin-container .form .btn{
+    width: 30%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #52d7ff;
+    
+    color: white;
+    
+    border-radius: 20px 20px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+.signin-container .form .btn:hover{
+    background-color: rgb(7, 155, 192);
+
+}
+
+.signin-container .signup-div{
+    align-content: center;
+    width: 50%;
+    text-align: center;
+    color: white;
+    background-color: #52d7ff;
+    border-radius:  0px 30px 30px 0px;
+    box-shadow: 10px 0px 10px 5px #4e07481e;
+}
+
+.signin-container .signup-div .btn{
+    border-color:white;
+    background-color: #52d7ff;
+    color: white;
+    border-radius: 20px 20px;
+    width: 30%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.signin-container .signup-div .btn:hover{
+    background-color: rgb(7, 155, 192);
+}
+.signin-container p a{
+    text-decoration: none;
+    color: black;
+}
+.sign a{
+    text-decoration: none;
+    color: black;
+}
+button a{
+    color: white;
+    text-decoration: none;
+
+}
+
+/*========  Contact Us page  ==========*/
+
+.contact-container{
+        
+    display: flex;
+    
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-top: 80px;
+   
+}
+
+.contact-container .c1{
+    width: 35%;
+    background-color: #f0831d; ;
+    color: white;
+    padding: 15px 15px;
+    position: relative;
+}
+.contact-container .c1 h3{
+    font-size: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+.contact-container .c1 p{
+    margin-top: 0;
+}
+.contact-container .c1 a{
+    text-decoration: none;
+    color: white;
+}
+.contact-container .c1 .connect{
+    text-align: center;
+    bottom: 0;
+    font-size: 24px;
+    margin-top: 300px;
+    
+}
+.contact-container .c1 .connect i{
+    padding-right: 10px;
+}
+.contact-container .c2{
+    width: 65%;
+    background-color: aliceblue;
+    padding: 40px 40px;
+}
+.contact-container .c2 h3{
+    font-size: 35px;
+}
+.contact-container input{
+    background-color: aliceblue;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    width: 90%;
+    font-size: 18px;
+    margin: 20px;
+    border-color: rgb(233, 180, 5);
+}
+
+.contact-container button{
+    width: 90%;
+    background-color: #006eff;
+    padding: 15px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    color: white;
+    margin: 20px;
+    
+}
+.contact-container button:hover{
+    background-color: #07479b;
+}
+
+.box:after {
+  content: ' ';
+  margin-top: -300px;
+  margin-left: -15px;
+  border-top: 45vh solid #008ce6;
+  border-right: 20vw solid transparent;
+  width: 0;
+  position: absolute;
+}
+
+
+/*======== FOOTER  =========*/
+footer {
+    background-color: #27170788;  
+    color: white;
+    text-align: center;
+    margin: 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+   
+  }
+  .footer-content{
+    margin-top: 0px;
+    padding: 0%;
+  }
+
+  .footer-content a{
+    color: wheat;
+    padding-right: 10px;
+    outline: #643f02;
+  }
+
+
+
+

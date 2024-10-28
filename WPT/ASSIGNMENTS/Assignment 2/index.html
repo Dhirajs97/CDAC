@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link rel="stylesheet" href="css/styles.css">
+
+    
+</head>
+<body>
+    <!-- Header  -->
+    <header>
+        <nav>
+            
+            <span id="brand-name">SNYAMTECH</span>
+            <div id="nav-links">
+                <a href="index.html">HOME</a>
+                <a href="#">PROCESS</a>
+                <div class="dropdown">
+                    <a href="#">SERVICES</a>
+                    <div class="dropdown-content">
+                        <a href="#">Web Design</a>
+                        <a href="#">UI Design</a>
+                        <a href="#">Web Development</a>
+                    </div>
+                </div>
+                <a href="#">OUR TEAM</a>
+                <a href="signin.html">LOGIN</a>
+                <a href="signup.html">REGISTER</a>
+                <a href="contactus.html">CONTACT US</a>
+            </div>
+            <div class="menu-icon">&#9776;</div>
+        </nav>
+    </header>
+    <marquee style="width: 100%; color: rgb(32, 65, 65); font-size: 15px; padding-top: 80px;" direction="left">Welcome to SNYAMTECH! Discover our Web Design, UI Design, and Web Development services.</marquee>
+    
+    <div class="container-fluid carosoul-section">
+        <div class="container-carosoul">
+            <div class="carosoul-content text-white text-uppercase">
+                
+                <div class="d-inline-flex text-white">
+                    <p>Think & Create</p>
+                    <h3 class="">We're an Experience Designer for your Business!</h3>
+                    <button>Get Started <i class="fa fa-arrow-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container-services">
+        <p>We Solve Real Problems</p>
+        <h2>What can we do for you?</h2>
+
+        <div class="services-content">
+            <div class="service-item">
+                <i class="fas fa-laptop-code"></i>
+                <h3>Web Development</h3>
+                <p>In a free hour, when our power of choice is untrammelled and when nothing prevents</p>
+            </div>
+            <div class="service-item">
+                <i class="fa fa-mobile-alt"></i>
+                <h3>UX Design</h3>
+                <p>In a free hour, when our power of choice is untrammelled and when nothing prevents</p>
+            </div>
+            <div class="service-item">
+                <i class="fa fa-paint-brush"></i>
+                <h3>Illustration</h3>
+                <p>In a free hour, when our power of choice is untrammelled and when nothing prevents</p>
+            </div>
+            <div class="service-item">
+                <i class="fa fa-mobile"></i>
+                <h3>App Development</h3>
+                <p>In a free hour, when our power of choice is untrammelled and when nothing prevents</p>
+            </div>
+            <div class="service-item">
+                <i class="fa fa-desktop"></i>
+                <h3>Responsive Design</h3>
+                <p>In a free hour, when our power of choice is untrammelled and when nothing prevents</p>
+            </div>
+            <div class="service-item">
+                <i class="fa fa-chart-line"></i>
+                <h3>Optimization</h3>
+                <p>In a free hour, when our power of choice is untrammelled and when nothing prevents</p>
+            </div>
+            <button class="all-services-btn">All Services</button>
+        </div>
+
+    </div>
+
+
+    <!-- About Us -->
+    <div class="container-about">
+        <div class="about-content">  
+            <p class="about-head">About Us</p>
+            <h2>A Creative Agency Built <br>To build Modern Brands </h2>
+            
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium in veniam reprehenderit, suscipit perspiciatis autem officiis nobis asperiores reiciendis beatae eius aut itaque nisi quis ducimus accusamus vitae excepturi est!</p>
+            <button class="all-services-btn">About Us</button>
+        </div>
+        
+        <div class="about-img">
+            <img src="./images/bg2.jpg" alt="">
+        </div>
+    </div>
+
+
+    <!-- Contact Us -->
+    <div class="container-contact">
+        <div class="about-content">              
+            <h2>Do You Want To Boost Your Business?</h2>         
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium in veniam reprehenderit, suscipit perspiciatis autem officiis nobis asperiores reiciendis beatae eius aut itaque nisi quis ducimus accusamus vitae excepturi est!</p>            
+        </div>    
+        <div class="div-btn">
+            <button class="all-services-btn"><a href="contactus.html">Contact Us</a></button>
+        </div>
+    </div>
+
+
+    <!--  Footer  -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; CDAC 2024. All rights reserved. Contact us: info@smartweb.com 
+           <br><a href="#"><i class="fa-brands fa-linkedin"></i></a> <a href="#"><i class="fa-brands fa-facebook"></i></a><a href="#"><i class="fa-brands fa-twitter"></i></a></p>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelector('.menu-icon').addEventListener('click', function() {
+            const navLinks = document.querySelector('#nav-links');
+            navLinks.classList.toggle('mobile-menu');
+        });
+    </script>
+</body>
+</html>
+
