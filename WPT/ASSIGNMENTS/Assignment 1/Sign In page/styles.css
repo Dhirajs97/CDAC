@@ -1,0 +1,97 @@
+
+html {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+             
+    
+}
+body {
+    padding-top: 50px;
+    padding-left: 30%;
+    background: url(bg3.jpg);
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container{
+    width: 600px;
+    height: auto;
+    text-align: center;
+    margin: 50px, auto;
+    display: flex;
+
+    border-radius: 30px 30px ;
+    
+    border-style: none;
+    box-shadow: 10px 10px 10px 5px #4e07481e;
+}
+
+.form{
+    width: 50%;
+    background-color: white;
+    opacity: 0.9;
+    text-align: center;
+    border-radius: 20px 0px 0px 20px;
+}
+.icons i{
+    padding-right: 10px;     
+    text-align: center;
+    color: rgb(68, 169, 216);
+}
+
+
+.form input{
+    width: 50%;
+    border-radius: 20px 20px;
+    margin-bottom: 10px;
+    padding: 10px 10px;
+    border-style: none;
+    background-color: rgba(128, 128, 128, 0.158);
+    
+}
+.form .sign{
+    font-size: 10px;
+    color: black;
+}
+
+.form .btn{
+    width: 30%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #52d7ff;
+    
+    color: white;
+    
+    border-radius: 20px 20px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+.form .btn :hover{
+    background-color: rgb(4, 150, 187);
+
+}
+
+.signup-div{
+    align-content: center;
+    width: 50%;
+    text-align: center;
+    color: white;
+    background-color: #52d7ff;
+    border-radius:  0px 30px 30px 0px;
+}
+
+.signup-div .btn{
+    border-color:white;
+    background-color: #52d7ff;
+    color: white;
+    border-radius: 20px 20px;
+    width: 30%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+a{
+    text-decoration: none;
+}
+
+
