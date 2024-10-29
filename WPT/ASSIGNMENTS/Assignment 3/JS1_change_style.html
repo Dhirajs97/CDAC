@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin-top: 50px;
+            padding-left: 10%;
+            padding-right: 10%;
+            display: absolute;
+            align-items: center;
+        }
+        #Paragraph {
+            
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            color: black;
+            
+        }
+        button{
+            align-content: center;
+        }
+    </style>
+
+</head>
+<body>
+
+    <p id="paragraph">It is rightly said that being disciplined is essential in life. When a person leads a
+        disciplined life, they set an easy path to success. They will develop an approach to
+        happiness and a beautiful future ahead. Being disciplined is the practice of having a
+        scheduled daily routine which helps an individual to be punctual and hard-working.
+        An individual is taught what being disciplined means from the time they are young.
+        Even though discipline takes a lot of effort, the advantages of a disciplined life
+        make it a worthwhile endeavour.
+    </p>
+
+    <button onclick="changeStyle()" style="padding: 5px 10px; background-color: rgb(14, 154, 189); color: white">Submit</button>
+    
+    <script>
+        function changeStyle() {
+            const para = document.getElementById('paragraph');
+            para.style.fontFamily = 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode';
+            para.style.fontSize = '25px';
+            para.style.color = 'rgb(88, 3, 84)';
+            para.style.backgroundColor="rgba(156, 227, 236, 0.377)";
+            para.style.padding="20px 20px";
+            para.style.fontStyle='italic'
+        }
+    </script>
+    
+</body>
+</html>
