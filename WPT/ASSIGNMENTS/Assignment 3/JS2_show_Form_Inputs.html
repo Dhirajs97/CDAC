@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        h2{
+            text-align: center;
+            margin-top: 30px;
+            background-color: rgb(247, 200, 143);
+            width: 20%;
+            margin-left: 40%;
+        }
+        #contactForm{
+            margin-left: 40%;
+            margin-right: 40%;
+            background-color: bisque;
+            padding: 20px 20px;
+            text-align: center;
+
+        }
+        label{
+            float: left;
+        }
+        input{
+            width: 80%;
+        }
+        button{
+            padding: 5px 15px;
+            background-color: #0099ff;
+            color: white;
+        }
+        #output{
+            margin-left: 40%;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <h2>Contact Form</h2>
+    <form id="contactForm" onsubmit="return handleSubmit(event);">
+      <label for="firstName">First Name:</label><br />
+      <input type="text" id="firstName" required /><br /><br />
+
+      <label for="lastName">Last Name:</label><br />
+      <input type="text" id="lastName" required /><br /><br />
+
+      <label for="contactNo">Contact No:</label><br />
+      <input type="tel" id="contactNo" required /><br /><br />
+
+      <label for="email">Email ID:</label><br />
+      <input type="email" id="email" required /><br /><br />
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <div id="output"></div>
+
+    <script>
+      function handleSubmit(event) {
+        event.preventDefault(); // Prevent form submission
+
+        // Get values
+        const firstName = document.getElementById("firstName").value;
+        const lastName = document.getElementById("lastName").value;
+        const contactNo = document.getElementById("contactNo").value;
+        const email = document.getElementById("email").value;
+
+        // Display 
+        const output = document.getElementById("output");
+        output.innerHTML = `
+                <h3>Form Values:</h3>
+                <p><strong>First Name:</strong> ${firstName}</p>
+                <p><strong>Last Name:</strong> ${lastName}</p>
+                <p><strong>Contact No:</strong> ${contactNo}</p>
+                <p><strong>Email ID:</strong> ${email}</p>
+            `;
+
+      }
+    </script>
+    
+</body>
+</html>

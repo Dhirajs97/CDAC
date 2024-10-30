@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: block;
+            align-items: center;
+            padding: 10%;
+        }
+        p{
+            font-size: 18px;
+        }
+        a{
+            color: #4d79ff;
+            cursor: pointer;
+            text-decoration: none;
+            font-style: italic;
+        }
+        .highlight{
+            color: rgb(102, 248, 102);
+        }
+    </style>
+</head>
+<body>
+    
+    <p>
+        <a href="#" onmouseover="highlightBold()" onmouseout="removeHighlight()">On mouse hover here bold words of the following para will be highlighted</a>
+    </p>
+
+    <p id="textpara">
+        <b>We</b> have just started <b>this</b> section for the users (<b>beginner</b> to intermediate) who <b>want</b> to work with <b>various</b> JavaScript <b>problems</b> and write scripts online to <b>test</b> their JavaScript <b>skill</b>.
+    </p>
+
+    <script>
+        const textPara = document.getElementById("textpara");
+        const originalContent = textPara.innerHTML;
+
+        function highlightBold() {        
+            textPara.innerHTML = textPara.innerHTML.replace(/<b>(.*?)<\/b>/g, '<b class="highlight">$1</b>');
+        }
+
+        function removeHighlight() {           
+            textPara.innerHTML = originalContent;
+        }
+    </script>
+
+</body>
+</html>
