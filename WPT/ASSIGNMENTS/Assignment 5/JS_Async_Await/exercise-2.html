@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        const fetchFast = ()=>{
+            return new Promise((resolve, reject)=>{
+                setTimeout(()=>{
+                    resolve("Fast Done!");
+                }, 2000);
+            });
+        };
+
+        const fetchSlow = ()=>{
+            return new Promise((resolve, reject)=>{
+                setTimeout(()=>{
+                    resolve("Slow Done!");
+                }, 6000);
+            });
+        };
+
+        console.log("Program starting...");
+        const firstTimestamp = new Date();
+
+        const useData = async()=>{
+            const fastResult = await fetchFast();
+            console.log(fastResult);
+            const slowResult = await fetchSlow();
+            console.log(slowResult);
+        };
+
+        
+        useData();
+        const secondTimestamp = new Date();
+        const timeElapsed = secondTimestamp - firstTimestamp;
+        console.log("Program completed!", timeElapsed);
+
+    </script>
+</body>
+</html>
